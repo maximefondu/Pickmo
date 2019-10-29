@@ -1,0 +1,193 @@
+.movie{
+    width: 100%;
+    height: 80%;
+    padding: 24px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding-top: 0;
+    line-height: 1.8;
+
+    @include sd{
+        padding: 42px;
+        padding-top: 0;
+        height: 65%;
+    }
+
+    @include md{
+        padding: 52px;
+        padding-top: 0;
+        height: 65%;
+        max-width: 700px;
+        margin-left: 10%;
+    }
+
+    &__content{
+        display: flex;
+        margin-bottom: 32px;
+    }
+
+    &__time{
+        margin-right: 24px;
+        display: flex;
+        align-items: center;
+
+        @include sd{
+            margin-right: 32px;
+        }
+
+        &:before{
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url(../assets/images/iconmonstr-time-17.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+        }
+    }
+
+    &__years{
+        display: flex;
+        align-items: center;
+
+        &:before{
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url(../assets/images/iconmonstr-calendar-4.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-right: 6px;
+        }
+    }
+
+    &__genres{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+
+    &__genresEl{
+        display: flex;
+        margin-right: 8px;
+        color: $c-green;
+        align-items: center;
+
+        &::after{
+            content: '|';
+            padding-left: 8px;
+        }
+        &:last-child::after{
+            content: '';
+            padding-left: 0px;
+        }
+    }
+
+    &__overview{
+        height: 35%;
+        overflow-y: auto;
+        margin-bottom: 16px;
+    }
+
+    &__btn{
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        &:before{
+            content:'';
+            background-image: url(../assets/images/arrow.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        @include lg{
+            left: 42px;
+        }
+    }
+
+    &__bar{
+        width: 100%;
+
+        &:after{
+            content: '';
+            width: calc(100% - 48px);
+            border-bottom: 1px solid $c-green;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            margin: 0 24px;
+
+            @include lg{
+                width: calc(100% - 84px);
+                margin: 0 42px;
+            }
+        }
+    }
+
+    &__wishlist{
+        margin-top: 16px;
+        color: $c-green;
+        font-size: 14px;
+        font-weight: 300;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        @include sd{
+           position: absolute;
+           bottom: 64px;
+           right: 32px;
+        }
+
+        @include lg{
+            right: 92px;
+        }
+
+        &:after{
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-image: url(../assets/images/star.svg);
+            background-size: 100%;
+            margin-left: 6px;
+        }
+    }
+
+    &__date{
+
+        &::before{
+            content: 'date de sorties : ';
+            color: $c-green;
+        }
+    }
+
+    &__budget{
+
+        &::before{
+            content: 'budget : ';
+            color: $c-green;
+        }
+    }
+}

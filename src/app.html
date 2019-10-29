@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Pickmo | Trouvez un film qui vous correspond</title>
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta:300,700" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#6ed55b">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+<!-- Méta Google -->
+<meta name="title" content="Pickmo" />
+<meta name="description" content="Trouvez toutes les informations nécessaire sur votre prochain film." />
+
+<!-- Métas Facebook Opengraph -->
+<meta property="og:title" content="Pickmo" />
+<meta property="og:description" content="Trouvez toutes les informations nécessaire sur votre prochain film." />
+<meta property="og:url" content="http://maximefondu.be/projets/movie-wishlist/" />
+<meta property="og:image" content="assets/images/banner.png" />
+<meta property="og:type" content="website"/>
+
+<!-- Métas Twitter Card -->
+<meta name="twitter:title" content="Pickmo" />
+<meta name="twitter:description" content="Trouvez toutes les informations nécessaire sur votre prochain film." />
+<meta name="twitter:url" content="http://maximefondu.be/projets/movie-wishlist/" />
+<meta name="twitter:image" content="assets/images/banner.png" />
+
+</head>
+<body class="body" data-page="1">
+    <header class="header">
+      <a href="index.html"><h1 class="header__logo">Pickmo</h1></a>
+      <form class="searchBar" method="get" action="#">
+          <label class="searchBar__label" for="recherche">Recherche</label>
+          <input class="searchBar__input" id="recherche" value="" type="search" name="searchBar" autocomplete="off" placeholder="Rechercher un film ...">
+          <button class="searchBar__btn">Rechercher</button>
+      </form>
+    </header>
+
+    <nav class="menu">
+        <ul class="menu__content">
+          <li class="menu__el"><a class="menu__link" href="#1">Accueil</a></li>
+          <li class="menu__el"><a class="menu__link menu__link--search" href="#2">Recherche</a></li>
+          <li class="menu__el"><a class="menu__link" href="#4">Les bientôt à l'affiche</a></li>
+          <li class="menu__el"><a class="menu__link" href="#5">Les sorties récentes</a></li>
+          <li class="menu__el"><a class="menu__link" href="#3">Ma liste</a></li>
+        </ul>
+      </nav>
+
+    <section class="section section--affiche">
+      <h2 class="title title--big title--meduim title--section">Les bientôt à l'affiche</h2>
+      <ul class="affiche"></ul>
+    </section>
+    <section class="section section--recents">
+        <h2 class="title title--big title--meduim title--section">Les sorties récentes</h2>
+        <ul class="recents"></ul>
+      </section>
+
+    <section class="section section--liste">
+      <h2 class="title title--meduim title--liste">Ma liste de films</h2>
+      <p class="infoList"></p>
+      <ul class="myList">
+      </ul>
+    </section>
+
+    <section class="section section--search">
+      <ul class="searchContent">
+      </ul>
+    </section>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

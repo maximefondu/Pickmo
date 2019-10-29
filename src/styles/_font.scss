@@ -1,0 +1,104 @@
+body{
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+ }
+ 
+ /* Reset */
+ ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ p{
+    margin: 0;
+ }
+ a{
+   text-decoration: none;
+   color: inherit;
+ }
+
+ .title{
+     margin: 0;
+     font-size: 16px;
+     line-height: 1.2;
+     color: #000;
+     font-weight: 300;
+     margin-bottom: 8px;
+     margin-top: 6px;
+
+     &--big{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+     }
+
+     &--uppercase{
+        text-transform: uppercase;
+    }
+
+     &--meduim{
+         font-size: 24px;
+         text-transform: uppercase;
+         font-weight: 700;
+     }
+
+     &--center{
+         text-align: center;
+
+        @include xl{
+            margin-bottom: 24px;
+        }
+     }
+
+     &--light{
+         color: #fff;
+     }
+
+     &--section{
+        border-bottom: 1px solid #000;
+        width: calc(100% - 48px);
+        margin-top: 0;
+        padding-bottom: 6px;
+        margin-bottom: 32px;
+
+        @include xl{
+            margin-left: 16px;
+        }  
+    }
+
+     &--liste{
+        margin-left: 24px;
+        border-bottom: 1px solid #000;
+        width: calc(100% - 48px);
+        margin-top: 24px;
+        padding-bottom: 6px;
+
+        @include sd{
+            width: calc(100% - 96px);
+            margin-left: 48px;
+            margin-top: 32px;
+        }
+     }
+ }
+
+ .note{
+    display: inline-block;
+    font-size: 16px;
+    padding: 1px 10px;
+    border: 2.5px solid $c-green;
+    border-radius: 4px;
+    margin-right: 16px;
+    color: $c-green;
+
+    @include sd{
+        margin-right: 32px;
+    }
+}

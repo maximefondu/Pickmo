@@ -1,0 +1,97 @@
+.menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px -4px #000;
+    font-size: 14px;
+    z-index: 110;
+    color:#000;
+
+    @include xl{
+        position: relative;
+    }
+
+    &--none{
+        display: none;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+        height: 100%;
+
+        @include xl{ 
+            justify-content: inherit;
+            padding-left: 64px;
+            font-size: 16px;
+        }
+    }
+
+    &__el{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:nth-child(3){
+            display: none;
+        }
+        &:nth-child(4){
+            display: none;
+        }
+
+        @include xl{
+            display: none;
+            width: 250px; 
+            align-items: flex-start;
+            &:nth-child(5){
+                display: block;
+            }
+            &:nth-child(3){
+                display: block;
+            }
+            &:nth-child(4){
+                display: block;
+            }
+        }
+
+
+        &:nth-child(2){
+            .menu__link:before{
+                background-image: url(../assets/images/loupe.svg);
+            }
+        }
+
+        &:nth-child(5){
+            .menu__link:before{
+                background-image: url(../assets/images/star.svg);
+            }
+        }
+    }
+
+    &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include xl{
+            align-items: inherit;
+        }
+
+        &:before{
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-size: 100%;
+            background-image: url(../assets/images/home.svg);
+
+            @include xl{
+                display: none;
+            }
+        }
+    }
+}

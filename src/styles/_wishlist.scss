@@ -1,0 +1,134 @@
+.infoList{
+    color: $c-green;;
+    margin-left: 24px;
+
+    @include sd{
+        margin-left: 48px;
+    }
+}
+
+.myList{
+    margin-top: 116px;
+    width: 100%;
+    height: calc(100% - 140px);
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    padding: 12px;
+    padding-top: 0; 
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+    @include sd{
+        padding: 32px;
+        padding-top: 0;
+        margin-top: 116px;
+        padding-bottom: 42px;
+    }
+
+    @include xl{
+        padding: 32px;
+        padding-top: 0;
+        margin-top: 116px;
+        height: fit-content;
+    }
+
+    &__el{
+        width: calc(50% - 24px);  
+        margin:0 12px;
+        position: relative;
+        margin-bottom: 24px;
+        transition: transform .15s ease-in;
+
+        @include xl{
+            &:hover{
+                transform: translateY(-20px);
+            }
+        }
+
+        @include sd{
+            width: calc(33.333% - 32px);  
+            margin:0 16px;
+        }
+
+        @include md{
+            width: calc(25% - 32px);  
+            margin:0 16px;
+        }
+
+        @include midxl{
+            width: calc(20% - 32px);  
+        }
+    }
+
+    &__link{
+        display: block;
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        height: 240px;
+
+        @include lg{
+            height: 340px;
+        }
+    }
+
+    &__btn{
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        width: 32px;
+        height: 32px;
+        background-image:url("../assets/images/star.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        cursor: pointer; 
+        margin: 0;
+        position: absolute;
+        top: 196px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        outline: none;
+        transition: transform .2s ease-in;
+
+        @include lg{
+            top: 284px;
+        }
+
+        @include xl{
+            &:hover{
+                transform: translateX(-50%) scale(1.4);
+            }
+        } 
+    }
+}
+
+.movieSelected{
+    .affiche__btn{
+        background-image: url(../assets/images/star_actived.svg);
+    }
+
+    .recents__btn{
+        background-image: url(../assets/images/star_actived.svg);
+    }
+
+    .recents__btn{
+        background-image: url(../assets/images/star_actived.svg);
+    }
+
+    .myList__btn{
+        background-image: url(../assets/images/star_actived.svg);
+    }
+
+    .movie__wishlist:after{
+        background-image: url(../assets/images/star_actived.svg);
+    } 
+}

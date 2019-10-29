@@ -1,0 +1,28 @@
+
+
+.animation{
+    animation: 1s page;
+    background-color: $c-green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+@keyframes page {
+   0%{
+      transform: translateY(0px);
+   }
+   100%{
+      transform: translateY(100%);
+   }
+}
+
+@keyframes movie {
+   0%{
+      transform: translateX(100%);
+   }
+   100%{
+      transform: translateX(0px);
+   }
+}
